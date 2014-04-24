@@ -30,6 +30,11 @@ public class CalcShell {
 		mapVars = new HashMap<Character, Double>();
 	}
 
+	/**
+	 * Assigns the value of a RPN equation to a variable.
+	 * @param expr the expression to evaluate.
+	 * @return s String describing the action performed.
+	 */
 	private String assignVariable(String expr) {
 		String[] ex = expr.split("=");
 		if (ex.length != 2) throw new IllegalArgumentException();
