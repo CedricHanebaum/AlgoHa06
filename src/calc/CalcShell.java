@@ -39,8 +39,12 @@ public class CalcShell {
 		String[] ex = expr.split("=");
 		if (ex.length != 2) throw new IllegalArgumentException();
 
-		String var = ex[0];
+		String var = ex[0].trim();
 		String exprRPN = ex[1];
+		
+		if(!isVariable(var)){
+			return "'" + var + "' can not be used as a Variable!";
+		}
 
 		double value = eval(exprRPN);
 		mapVars.put(var.charAt(0), value);
