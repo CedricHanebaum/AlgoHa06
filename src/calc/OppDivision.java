@@ -11,7 +11,7 @@ public class OppDivision extends Opperator{
 			if(stack.isEmpty()) return new Value(Double.NaN);
 			vals[i] = stack.pop().evaluate(stack).getValue();
 		}
-		return new Value(vals[0] / vals[1]);
+		return new Value(vals[1] / vals[0]);
 	}
 
 }
